@@ -52,7 +52,7 @@ export function fetchAuction(auctionId) {
   };
 }
 
-export function placeBid(auctionId, value) {
+function placeBid(auctionId, value) {
   return {
     type: PLACE_BID,
     auctionId,
@@ -60,26 +60,40 @@ export function placeBid(auctionId, value) {
   };
 }
 
-export function receiveBid(data) {
-  return {
-    type: RECEIVE_BID,
-    ...data
-  };
+function shouldPlaceBid(state, auctionId, value) {
+  const auction = state.auctionsById[auctionId];
+  if (auction && value > auction.bid) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 export function updateBid(auctionId, value) {
   return (dispatch, getState) => {
-    const { user } = getState();
-    dispatch(placeBid(auctionId, value));
-    return fetch(`${auctionsUrl}/${auctionId}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        bidder: user,
-        bid: value
-      })
-    });
+    const state = getState();
+    if (shouldPlaceBid(state, auctionId, value)) {
+      dispatch(placeBid(auctionId, value));
+      return fetch(`${auctionsUrl}/${auctionId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          bidder: state.user,
+          bid: value
+        })
+      });
+    } else {
+      // Let the calling code know there's nothing to wait for.
+      return Promise.resolve();
+    }
+  };
+}
+
+export function receiveBid(data) {
+  return {
+    type: RECEIVE_BID,
+    ...data
   };
 }
