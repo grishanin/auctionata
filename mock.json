@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "name": "Leonardo"
+    },
+    {
+      "name": "Raphael"
+    },
+    {
+      "name": "Michelangelo"
+    },
+    {
+      "name": "Donatello"
+    }
+  ],
+  "items": [
+    {
+      "id": 9,
+      "description": "Vasili Dimitrievich Polenov, ‘At the Holy Spring’, painting",
+      "image": "https://d2c2dsgt13elzw.cloudfront.net/resources/630x473/88/1d/13b3-e959-4bce-a2fc-bbbbcfa027b7.jpg",
+      "price": 16500
+    },
+    {
+      "id": 12,
+      "description": "Wilhelm Schacht (1872-1951), Winter Scene, Oil Painting, 1920",
+      "image": "https://d2c2dsgt13elzw.cloudfront.net/resources/630x473/45/e9/e546-fc94-47bd-90aa-c5a00ac77d6a.jpg",
+      "price": 950
+    },
+    {
+      "id": 27,
+      "description": "Vladimir Naiditch (1903-1980), Studio Interior, Oil, c. 1930",
+      "image": "https://d2c2dsgt13elzw.cloudfront.net/resources/630x473/d7/bc/a42d-5db1-4f96-aab5-835b0e78f9bf.jpg",
+      "price": 8350
+    }
+  ],
+  "auctions": [
+    {
+      "id": 4,
+      "openingBid": 523,
+      "estimatePrice": 950,
+      "bid": 650,
+      "bidder": "Raphael",
+      "itemId": 12,
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "openingBid": 4000,
+      "estimatePrice": 8350,
+      "bid": 7000,
+      "bidder": "Michelangelo",
+      "itemId": 27,
+      "status": "active"
+    }
+  ]
+}
