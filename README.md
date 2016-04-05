@@ -6,7 +6,7 @@ For this test task I decided to implement real-time bids update feature so I use
 
 Server is based on Express and provides hot reloading, fake REST API, real-time communication.
 
-Client is created in accordance with Flux/Redux approach, using ES6 features provided by Babel and Webpack, Less.
+Client is created in accordance with Flux/Redux approach, using ES6 features provided by Babel and Webpack.
 
 ### Executed features
 - Viewing auction details
