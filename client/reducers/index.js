@@ -7,7 +7,7 @@ import {
   RECEIVE_AUCTIONS
 } from '../actions';
 
-function user(state = '', action) {
+export function user(state = '', action) {
   switch (action.type) {
     case LOGIN:
       return action.user;
@@ -16,7 +16,7 @@ function user(state = '', action) {
   }
 }
 
-function selectedAuction(state = '', action) {
+export function selectedAuction(state = '', action) {
   switch (action.type) {
     case SELECT_AUCTION:
       return action.auctionId;
@@ -25,7 +25,7 @@ function selectedAuction(state = '', action) {
   }
 }
 
-function auction(state, action) {
+export function auction(state, action) {
   switch (action.type) {
     case REQUEST_AUCTION:
       return Object.assign({}, state, {
@@ -53,7 +53,7 @@ function auction(state, action) {
   }
 }
 
-function auctionsById(state = {}, action) {
+export function auctionsById(state = {}, action) {
   switch (action.type) {
     case RECEIVE_AUCTIONS:
       return Object.assign({}, state,
