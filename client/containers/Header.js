@@ -10,7 +10,7 @@ function Header({ dispatch, user, selectedAuction }) {
       <Select
         value={selectedAuction}
         options={[ 4, 7]}
-        label={`Select auction:`}
+        label='Select auction:'
         onChange={(value) => dispatch(selectAuction(value))} />
       <LogIn currentUser={user} onLogin={user => dispatch(logIn(user))} />
     </div>

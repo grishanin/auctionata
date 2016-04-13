@@ -9,7 +9,8 @@ import { setupRealtime } from './Realtime';
 
 import '../css/main.less';
 
-const store = configureStore();
+const initialState = window.INITIAL_STATE;
+const store = configureStore(initialState);
 
 render(
   <Root store={store} routes={routes}/>,

@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 
 export function setupRealtime(store, actions) {
-  const socket = io('http://localhost:8080/');
+  const socket = io();
 
   socket.on('new bid placed', bidData => {
     console.log('new bid placed', bidData);
