@@ -6,7 +6,7 @@ var host = (process.env.HOST || 'localhost');
 var port = (+process.env.PORT + 1) || 3001;
 
 var DIR_JS = path.resolve(__dirname, '../client');
-var DIR_BUILD = path.resolve(__dirname, 'build');
+var DIR_BUILD = path.resolve(__dirname, '../build');
 
 module.exports = {
   devtool: 'eval',
