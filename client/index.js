@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import configureStore from './store/configureStore';
+import configureStore from '../universal/store/configureStore';
 import Root from './containers/Root';
-import routes from './routes';
-import * as actions from './actions';
-import { setupRealtime } from './Realtime';
+import routes from '../universal/routes';
+import * as actions from '../universal/actions';
+import { setupRealtime } from './realtime';
 
 import '../css/main.less';
 

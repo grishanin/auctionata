@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { RouterContext, match } from 'react-router';
-import routes from '../client/routes';
+import routes from '../universal/routes';
 
-import configureStore from '../client/store/configureStore';
+import configureStore from '../universal/store/configureStore';
 
 export function render(req, res) {
   match({

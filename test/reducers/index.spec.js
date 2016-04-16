@@ -4,14 +4,14 @@ import {
   selectedAuction,
   auction,
   auctionsById
-} from '../../client/reducers';
+} from '../../universal/reducers';
 import {
   LOGIN,
   SELECT_AUCTION,
   PLACE_BID, RECEIVE_BID,
   REQUEST_AUCTION, RECEIVE_AUCTION,
   RECEIVE_AUCTIONS
-} from '../../client/actions';
+} from '../../universal/actions';
 
 describe('reducers', () => {
   describe('login', () => {
